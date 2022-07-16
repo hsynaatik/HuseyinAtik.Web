@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Hüseyin ATIK</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+    <link href="~/tema/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/tema/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/tema/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/tema/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/tema/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/tema/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <link href="~/tema/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: iPortfolio - v3.7.0
+    * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex flex-column">
+
+
+            <div class="profile">
+                <img src="~/tema/assets/img/portfolio/fotom.jpg" alt="" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index.html">Hüseyin ATIK</a></h1>
+               @await Component.InvokeAsync("SocialMediaList")
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house-door-fill"></i> <span>Anasayfa</span></a></li>
+                    <li><a href="#about" class="nav-link scrollto"><i class="bi bi-file-person"></i> <span>Hakkında</span></a></li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-journal-bookmark-fill"></i> <span>Eğitim & Deneyim</span></a></li>
+                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-collection-fill"></i> <span>Projeler</span></a></li>
+                    <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-info-square-fill"></i> <span>İletişim</span></a></li>
+                    <li><a href="#" class="nav-link scrollto"><i class="bi bi-box-arrow-right"></i> <span>Giriş Yap</span></a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="container" data-aos="fade-in">
+            <h1>Hüseyin ATIK</h1>
+            <p> <span class="typed" data-typed-items="I'm Backend Developer"></span></p>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        @await Component.InvokeAsync("AboutList")
+        <!-- End About Section -->
+        <!-- ======= Facts Section ======= -->
+        @await Component.InvokeAsync("FactList")
+        <!-- End Facts Section -->
+        <!-- ======= Skills Section ======= -->
+        @await Component.InvokeAsync("SkillList")
+        <!-- End Skills Section -->
+        @await Component.InvokeAsync("ResumeList")
+
+        @await Component.InvokeAsync("ProjectList")
+
+
+        <!-- ======= Contact Section ======= -->
+        @await Component.InvokeAsync("ContactList")
+        <!-- End Contact Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Hüseyin ATIK</span></strong>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">Hüseyin ATIK</a>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/tema/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="~/tema/assets/vendor/aos/aos.js"></script>
+    <script src="~/tema/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/tema/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/tema/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/tema/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/tema/assets/vendor/typed.js/typed.min.js"></script>
+    <script src="~/tema/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/tema/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/tema/assets/js/main.js"></script>
+
+</body>
+
+</html>
+

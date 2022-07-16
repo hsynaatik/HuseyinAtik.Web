@@ -1,0 +1,13 @@
+﻿@using EntityLayer.Concrete
+@model List<SocialMedia>
+
+
+
+<div class="social-links mt-3 text-center">
+    @foreach (var item in Model)
+    {
+        <a href="@item.Url" h1="@item.SocialMediaName"><i class="@item.Icon"></i></a>
+
+    }
+
+</div>
