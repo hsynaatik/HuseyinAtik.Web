@@ -9,7 +9,7 @@ namespace HuseyinAtik.Web.ViewComponents.SocialMediaList
         SocialMediaManager csm= new SocialMediaManager(new EfSocialMediaRepository());
         public IViewComponentResult Invoke()
         {
-            var values = csm.GetList();
+            var values = csm.GetAboutListWithUser();
 
             return View(values);
         }

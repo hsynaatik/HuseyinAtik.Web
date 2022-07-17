@@ -20,6 +20,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+
         public List<User> GetList()
         {
             throw new NotImplementedException();

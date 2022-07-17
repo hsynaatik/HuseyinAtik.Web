@@ -13,7 +13,8 @@ namespace EntityLayer.Concrete
         public int UserId { get; set; } 
         public string UserName { get; set; } 
         public string UserSurname { get; set; } 
-        public string FullName{ get { return UserName + " " + UserSurname; } } 
+        public string FullName{ get { return UserName + " " + UserSurname; } }
+        public string jopTitle { get; set; }
         public DateTime BirthDay { get; set; }
         public string WebSiteUrl { get; set; }
         public string UserImageUrl { get; set; }

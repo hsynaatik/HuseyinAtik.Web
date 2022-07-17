@@ -18,6 +18,7 @@ namespace BusinessLayer.Concrete
             _aboutDal = aboutDal;
         }
 
+
         public void Add(About entity)
         {
             throw new NotImplementedException();
@@ -28,9 +29,14 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<About> GetAboutListWithUser()
+        {
+            return _aboutDal.GetAboutWithUser();
+        }
+
         public List<About> GetList()
         {
-            return _aboutDal.GetListAll();
+            throw new NotImplementedException();
         }
 
         public About TGetById(int id)
@@ -42,5 +48,7 @@ namespace BusinessLayer.Concrete
         {
             throw new NotImplementedException();
         }
+
+      
     }
 }

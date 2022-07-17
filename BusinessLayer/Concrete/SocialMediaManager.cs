@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _socialMediaDal = socialMediaDal;
         }
 
+        public object GetAboutListWithUser()
+        {
+            return _socialMediaDal.GetListAll();
+        }
+
         public void Add(SocialMedia entity)
         {
             _socialMediaDal.Insert(entity);

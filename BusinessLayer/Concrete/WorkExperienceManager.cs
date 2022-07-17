@@ -20,6 +20,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+
         public List<WorkExperience> GetList()
         {
             throw new NotImplementedException();

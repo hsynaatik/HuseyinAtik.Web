@@ -9,7 +9,7 @@ namespace HuseyinAtik.Web.ViewComponents.AboutList
         AboutManager aboutManager = new AboutManager(new EfAboutRepository());
         public IViewComponentResult Invoke()
         {
-            var values = aboutManager.GetList();
+            var values = aboutManager.GetAboutListWithUser();
             return View(values);
         }
     }
