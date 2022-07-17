@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BusinessLayer.Concrete
 {
     public class ProjectManager : IProjectService
     {
+        IProjectDal _projectDal;
+
+        public ProjectManager(IProjectDal projectDal)
+        {
+            _projectDal = projectDal;
+        }
+
         public void Add(Project entity)
         {
             throw new NotImplementedException();
@@ -22,7 +30,12 @@ namespace BusinessLayer.Concrete
 
         public List<Project> GetList()
         {
-            throw new NotImplementedException();
+            return _projectDal.GetListAll();
+        }
+
+        public List<Project> GetProjectListWithCategory()
+        {
+            return _projectDal.GetProjectWithCategory();
         }
 
         public Project TGetById(int id)

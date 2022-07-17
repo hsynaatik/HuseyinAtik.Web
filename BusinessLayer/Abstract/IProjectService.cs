@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface IProjectService:IGenericService<Project>
     {
+        List<Project> GetProjectListWithCategory();
     }
 }

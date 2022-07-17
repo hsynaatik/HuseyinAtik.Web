@@ -1,12 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HuseyinAtik.Web.ViewComponents.SkillList
 {
     public class SkillList : ViewComponent
     {
+        SkillManager skillManager = new SkillManager(new EfSkillRepository());
         public IViewComponentResult Invoke()
         {
-            return View();
+            var values = skillManager.GetList();
+            return View(values);
         }
     }
 }

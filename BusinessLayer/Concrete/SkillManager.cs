@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace BusinessLayer.Concrete
 {
     public class SkillManager : ISkillService
     {
+        ISkillDal _skillDal;
+
+        public SkillManager(ISkillDal skillDal)
+        {
+            _skillDal = skillDal;
+        }
+
         public void Add(Skill entity)
         {
             throw new NotImplementedException();
@@ -22,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public List<Skill> GetList()
         {
-            throw new NotImplementedException();
+            return _skillDal.GetListAll();
         }
 
         public Skill TGetById(int id)
