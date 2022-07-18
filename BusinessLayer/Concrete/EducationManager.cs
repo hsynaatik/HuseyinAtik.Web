@@ -9,38 +9,37 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class WorkExperienceManager : IWorkExperienceService
+    public class EducationManager : IEducationService
     {
 
-        IWorkExperienceDal _workExperienceDal;
+        IEducationDal _educationDal;
 
-        public WorkExperienceManager(IWorkExperienceDal workExperienceDal)
+        public EducationManager(IEducationDal educationDal)
         {
-            _workExperienceDal = workExperienceDal;
+            _educationDal = educationDal;
         }
 
-        public void Add(WorkExperience entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(WorkExperience entity)
+        public void Add(Education entity)
         {
             throw new NotImplementedException();
         }
 
-
-        public List<WorkExperience> GetList()
-        {
-            return _workExperienceDal.GetListAll();
-        }
-
-        public WorkExperience TGetById(int id)
+        public void Delete(Education entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(WorkExperience entity)
+        public List<Education> GetList()
+        {
+           return  _educationDal.GetListAll();
+        }
+
+        public Education TGetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Education entity)
         {
             throw new NotImplementedException();
         }

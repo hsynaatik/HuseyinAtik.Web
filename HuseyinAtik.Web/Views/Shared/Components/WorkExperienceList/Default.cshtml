@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model List<WorkExperience>
+
+<section id="resume" class="resume">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Deneyim</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+                @foreach (var item in Model)
+                {
+                    <h3 class="resume-title">Staj</h3>
+                    <div class="resume-item pb-0">
+                        <h4>@item.WorkTitle</h4>
+                        <p><em>@item.WorkDescription</em></p>
+                        <ul>
+                            <li>@item.WorkStartDate - @item.WorkFinishDate</li>
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+</section>

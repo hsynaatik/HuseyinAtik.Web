@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Concrete
+@model List<Education>
+
+<section id="resume" class="resume">
+    <div class="container">
+        <div class="section-title">
+            <h2>Eğitim</h2>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="resume-item">
+                <h4>@item.EducationTitle</h4>
+                <h5>@item.EducationStartDate ~ @item.EducationFinishDate</h5>
+                <p><em>@item.EducationDescription</em></p>
+            </div>
+           
+        }
+    </div>
+</section>

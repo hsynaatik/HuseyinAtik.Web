@@ -16,5 +16,7 @@ namespace EntityLayer.Concrete
         public DateTime WorkStartDate { get; set; }
         public DateTime WorkFinishDate { get; set; }
         public bool WorkStatus { get; set; }
+
+       
     }
 }

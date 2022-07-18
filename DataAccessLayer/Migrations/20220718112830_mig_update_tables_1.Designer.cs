@@ -4,14 +4,16 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20220718112830_mig_update_tables_1")]
+    partial class mig_update_tables_1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -234,7 +236,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("EducationId");
 
-                    b.ToTable("Educations");
+                    b.ToTable("Education");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Project", b =>
@@ -273,8 +275,8 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("SkilStatus")
-                        .HasColumnType("bit");
+                    b.Property<string>("SkilStatus")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SkillName")
                         .HasColumnType("nvarchar(max)");
@@ -368,6 +370,9 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("EducationId")
+                        .HasColumnType("int");
+
                     b.Property<string>("WorkDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -384,6 +389,8 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("WorkId");
+
+                    b.HasIndex("EducationId");
 
                     b.ToTable("WorkExperiences");
                 });
@@ -520,6 +527,17 @@ namespace DataAccessLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("SocialMedia");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.WorkExperience", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Education", "Education")
+                        .WithMany()
+                        .HasForeignKey("EducationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Education");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

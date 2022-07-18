@@ -13,7 +13,7 @@ namespace EntityLayer.Concrete
         public int SkillId { get; set; }
         public string SkillName { get; set; }
         public string SkillScore { get; set; }
-        public string SkilStatus { get; set; }
+        public bool SkilStatus { get; set; }
 
     }
 }

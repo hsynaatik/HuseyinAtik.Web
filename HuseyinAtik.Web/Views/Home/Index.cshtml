@@ -52,10 +52,10 @@
 
             <div class="profile">
                 <img src="~/tema/assets/img/portfolio/fotom.jpg" alt="" class="img-fluid rounded-circle">
-               
+
 
                 <h1 class="text-light"><a href="index.html">Hüseyin ATIK</a></h1>
-               @await Component.InvokeAsync("SocialMediaList")
+                @await Component.InvokeAsync("SocialMediaList")
             </div>
 
             <nav id="navbar" class="nav-menu navbar">
@@ -63,7 +63,8 @@
                     <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house-door-fill"></i> <span>Anasayfa</span></a></li>
                     <li><a href="#about" class="nav-link scrollto"><i class="bi bi-file-person"></i> <span>Hakkında</span></a></li>
                     <li><a href="#skill" class="nav-link scrollto"><i class="bi bi-pencil-fill"></i> <span>Yetenekler</span></a></li>
-                    <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-journal-bookmark-fill"></i> <span>Eğitim & Deneyim</span></a></li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-journal-bookmark-fill"></i> <span>Eğitim </span></a></li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-person-workspace"></i> <span>Deneyim </span></a></li>
                     <li><a href="#portfolio" class="nav-link scrollto"><i class="bi bi-collection-fill"></i> <span>Projeler</span></a></li>
                     <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-info-square-fill"></i> <span>İletişim</span></a></li>
                     <li><a href="#" class="nav-link scrollto"><i class="bi bi-box-arrow-right"></i> <span>Giriş Yap</span></a></li>
@@ -87,11 +88,13 @@
         <!-- ======= Skills Section ======= -->
         @await Component.InvokeAsync("SkillList")
         <!-- End Skills Section -->
-        @await Component.InvokeAsync("ResumeList")
+        @await Component.InvokeAsync("EducationList")
 
+        @await Component.InvokeAsync("WorkExperienceList")
+       
         @await Component.InvokeAsync("ProjectList")
 
-          <!-- ======= Facts Section ======= -->
+        <!-- ======= Facts Section ======= -->
         @await Component.InvokeAsync("FactList")
         <!-- End Facts Section -->
         <!-- ======= Contact Section ======= -->

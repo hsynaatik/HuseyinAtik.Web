@@ -4,14 +4,16 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20220718115046_mig_education_update_2")]
+    partial class mig_education_update_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -210,33 +212,6 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.Education", b =>
-                {
-                    b.Property<int>("EducationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("EducationDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("EducationFinishDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("EducationStartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("EducationStatus")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("EducationTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("EducationId");
-
-                    b.ToTable("Educations");
-                });
-
             modelBuilder.Entity("EntityLayer.Concrete.Project", b =>
                 {
                     b.Property<int>("ProjectId")
@@ -273,8 +248,8 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("SkilStatus")
-                        .HasColumnType("bit");
+                    b.Property<string>("SkilStatus")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SkillName")
                         .HasColumnType("nvarchar(max)");
