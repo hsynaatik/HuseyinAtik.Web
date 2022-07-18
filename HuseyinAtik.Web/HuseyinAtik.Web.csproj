@@ -5,13 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\admin\vendors\bootstrap\.github\CONTRIBUTING.md" />
-    <None Include="wwwroot\admin\vendors\bootstrap\.github\ISSUE_TEMPLATE\bug.md" />
-    <None Include="wwwroot\admin\vendors\bootstrap\.github\ISSUE_TEMPLATE\bug_report.md" />
-    <None Include="wwwroot\admin\vendors\bootstrap\.github\ISSUE_TEMPLATE\feature.md" />
-    <None Include="wwwroot\admin\vendors\bootstrap\.github\ISSUE_TEMPLATE\feature_request.md" />
-    <None Include="wwwroot\admin\vendors\bootstrap\.github\SUPPORT.md" />
-    <None Include="wwwroot\admin\vendors\jquery-validation-unobtrusive\.vsts-pipelines\builds\ci-public.yml" />
+    <Compile Remove="wwwroot\AdminLTE-3.0.4\**" />
+    <Compile Remove="wwwroot\admin\**" />
+    <Content Remove="wwwroot\AdminLTE-3.0.4\**" />
+    <Content Remove="wwwroot\admin\**" />
+    <EmbeddedResource Remove="wwwroot\AdminLTE-3.0.4\**" />
+    <EmbeddedResource Remove="wwwroot\admin\**" />
+    <None Remove="wwwroot\AdminLTE-3.0.4\**" />
+    <None Remove="wwwroot\admin\**" />
   </ItemGroup>
 
   <ItemGroup>
